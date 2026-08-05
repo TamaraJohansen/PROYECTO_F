@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Home',
-    'Menu',
-    'Galeria',
+    'home',
+    'menu',
+    'galeria',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +116,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
+
+MEDIA_URL='/img/'
+MEDIA_ROOT=BASE_DIR/'static/img'
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR/'static']
