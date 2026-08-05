@@ -10,5 +10,15 @@
 <body>
     <h2>Galería</h2>
     <p>Aquí aparecerán las imágenes.</p>
+    
+    <ul>
+        {% for foto in catalogo %}
+            <li>
+                <h3>{{ foto.titulo }}</h3>
+                <img src="{{ foto.imagen.url }}" alt="{{ foto.titulo }}">
+            </li>
+        {% endfor %}
+        </ul>
+
 </body>
 </html>

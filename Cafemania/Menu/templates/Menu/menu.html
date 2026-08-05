@@ -10,5 +10,14 @@
 <body>
     <h2>Nuestro menú</h2>
     <p>Aquí aparecerán los productos.</p>
+    <ul>
+        {% for producto in catalogo %}
+            <li>
+                <h3>{{ producto.nombre }}</h3>
+                <p>{{ producto.descripcion }}</p>
+                <p>Precio: ${{ producto.precio }}</p>
+            </li>
+        {% endfor %}
+        </ul>
 </body>
 </html>
