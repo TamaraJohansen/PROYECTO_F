@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block contenido %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,14 +12,15 @@
 <body>
     <h2>Nuestro menú</h2>
     <p>Aquí aparecerán los productos.</p>
-    <ul>
-        {% for producto in catalogo %}
-            <li>
-                <h3>{{ producto.nombre }}</h3>
-                <p>{{ producto.descripcion }}</p>
-                <p>Precio: ${{ producto.precio }}</p>
-            </li>
-        {% endfor %}
-        </ul>
+    
+    {% for producto in catalogo %}
+    <div class="producto">
+        <h3>{{ producto.nombre }}</h3>
+        <p>Precio: ${{ producto.precio }}</p>
+        <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" width="250">
+    </div> 
+    <hr>   
+    {% endfor %}        
 </body>
 </html>
+{% endblock %}

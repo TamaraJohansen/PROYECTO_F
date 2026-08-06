@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block contenido %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,15 +12,14 @@
 <body>
     <h2>Galería</h2>
     <p>Aquí aparecerán las imágenes.</p>
-    
-    <ul>
-        {% for foto in catalogo %}
-            <li>
-                <h3>{{ foto.titulo }}</h3>
-                <img src="{{ foto.imagen.url }}" alt="{{ foto.titulo }}">
-            </li>
-        {% endfor %}
-        </ul>
+
+    {% for foto in catalogo %}
+    <div>
+        <img src="{{ foto.imagen.url }}" alt="{{ foto.titulo }}" width="250">
+        <p>{{ foto.titulo }}</p> 
+    </div>
+     {% endfor %}
 
 </body>
 </html>
+{% endblock %}
