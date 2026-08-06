@@ -16,7 +16,9 @@
     {% for producto in catalogo %}
     <div class="producto">
         <h3>{{ producto.nombre }}</h3>
-        <p>Precio: ${{ producto.precio }}</p>
+        <p>Precio: ${{ producto.descripcion }}</p>
+        <p>Precio: ${{ producto.precio_mediano }}</p>
+        <p>Precio: ${{ producto.precio_grande }}</p>
         <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" width="250">
     </div> 
     <hr>   
