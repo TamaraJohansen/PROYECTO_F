@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <title>Cafemanía</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
 </head>
 <body>
 
 <header>
 
-    <h1>Cafemanía</h1>
-
-    <nav>
-        <a href="{% url 'inicio' %}">Inicio</a>
-        <a href="{% url 'menu' %}">Menú</a>
-        <a href="{% url 'galeria' %}">Galería</a>
-    </nav>
-
+    <div class="logo"><img src="{% static 'img/Logo.png' %}" alt="Logo"></div>
+    <div><h1>Cafemanía</h1></div>
 </header>
+<nav>
+    
+    <a href="{% url 'inicio' %}">Inicio</a>
+    <a href="{% url 'menu' %}">Menú</a>
+    <a href="{% url 'galeria' %}">Galería</a>
+    
+</nav>
+
+
 
 <hr>
 {% block contenido %}
